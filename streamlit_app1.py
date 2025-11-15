@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 # Load trained model
-model = load_model("sign_language_model.h5")
+model = load_model("sign_language_cnn_model.h5")
 
 # Class labels (adjust according to your dataset)
 class_labels = ['A', 'B', 'C', 'D', 'E']  # Example
@@ -30,3 +30,4 @@ if uploaded_file is not None:
     predicted_class = class_labels[np.argmax(pred)]
     
     st.write(f"Predicted Sign: **{predicted_class}**")
+
